@@ -32,6 +32,12 @@ def switch_player(current_player):
     else:
         return 'X'
     
+def is_draw(board):
+    for row in board:
+        if '#' in row:
+            return False
+    return True
+
 
 def check_winner(board):
     for i in range(3):
@@ -49,12 +55,7 @@ def check_winner(board):
         return board[0][2]
     return None
 
-def is_draw(board):
-    for i in range(3):
-        for j in range(3):
-            if board[i][j]:
-                return False
-    return True
+
 
 
 def get_input(player):
@@ -98,4 +99,5 @@ def main():
             current_player = switch_player(current_player)
 
 main()
+
 
