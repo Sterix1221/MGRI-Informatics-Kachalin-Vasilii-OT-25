@@ -1,7 +1,3 @@
-#int целое число 1 2 3 1234
-#str строка "текст блять"
-#bool логические хуйни True False
-
 def initialize_board():
     board = []
     for i in range(3):
@@ -102,3 +98,4 @@ def main():
             current_player = switch_player(current_player)
 
 main()
+
